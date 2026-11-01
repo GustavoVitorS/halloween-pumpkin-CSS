@@ -1,0 +1,14 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Testes offline — ABÓBORA V3</title><style>body{background:#181222;color:#f5e7d5;font:16px system-ui;padding:25px}pre{padding:15px;border:1px solid #b18a7a;border-radius:9px;line-height:1.7;white-space:pre-wrap}.pass{color:#9befb7}.fail{color:#ff8c8c}</style></head><body><h1>🧪 Testes offline da campanha</h1><p>Este arquivo funciona diretamente no navegador, sem instalar nada.</p><pre id="result"></pre>
+<script src="../js/config.js"></script><script src="../js/levels.js"></script><script>
+(function(){const G=window.ABO,tests=[],test=(s,fn)=>{try{if(!fn())throw new Error('condição falsa');tests.push(['✔',s,true]);}catch(e){tests.push(['✘',s+': '+e.message,false]);}};
+ test('36 fases podem ser geradas',()=>Array.from({length:36},(_,i)=>G.makeLevel(i)).length===36);
+ test('6 mundos com 6 fases',()=>G.worlds.length===6&&G.worlds.every(w=>w.stages.length===6));
+ test('3 almas em todas as fases',()=>Array.from({length:36},(_,i)=>G.makeLevel(i).souls.length===3).every(Boolean));
+ test('chefes ao final de todos os mundos',()=>[5,11,17,23,29,35].every(i=>G.makeLevel(i).bossEntity?.hp>0));
+ test('começo tem terreno',()=>Array.from({length:36},(_,i)=>G.makeLevel(i)).every(x=>x.ground.some(g=>g.x<=90&&g.x+g.w>180)));
+ test('portal final tem terreno',()=>Array.from({length:36},(_,i)=>G.makeLevel(i)).every(x=>x.ground.some(g=>g.x<=x.gate.x&&g.x+g.w>=x.gate.x+x.gate.w)));
+ test('habilidades e renderização usam APIs nativas',()=>!!document.createElement('canvas').getContext('2d'));
+ test('salvamento possui fallback seguro',()=>typeof G.safewrite==='function'&&G.newSave().version===3);
+ test('fase independente de fetch ou rede',()=>G.makeLevel(0).platforms.length>0&&G.makeLevel(35).ground.length>0);
+ const el=document.querySelector('#result');el.innerHTML=tests.map(t=>`<span class="${t[2]?'pass':'fail'}">${t[0]} ${t[1]}</span>`).join('\n')+`\n\n${tests.filter(t=>t[2]).length}/${tests.length} testes passaram.`;})();
+</script></body></html>

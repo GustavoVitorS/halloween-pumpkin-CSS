@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>🎃 </title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#110d1e">
+<meta name="description" content="ABÓBORA: O Reino das Sombras — uma aventura 2D de Halloween feita com HTML, CSS e JavaScript puros. Jogue offline, sem instalação.">
+<title>ABÓBORA: O Reino das Sombras — Vigu Studio V3</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div class="stalk"></div>
-<div class="pumpkin">
-	<div class="stripesOutter">
-		<div class="stripesInner">
-			<div class="leftEye">
-				<div class="eyeBall"></div>
-			</div>
-			<div class="blushLeft"></div>
-			<div class="rightEye">
-				<div class="eyeBall"></div>
-			</div>
-			<div class="blushRight"></div>
-			<div class="mouth"></div>
-		</div>
-	</div>
-</div>
-<div class="shadow"></div>
-</body>
-</html>
+<body><main id="app"><div id="viewport" aria-label="Jogo de plataforma ABÓBORA: O Reino das Sombras"><canvas id="screen" width="960" height="540" aria-label="Cenário interativo do jogo"></canvas>
+<section id="menu" class="panel menu">
+ <div class="menu-left"><p class="eyebrow">VIGU STUDIO <span>✦</span> UMA AVENTURA FEITA À MÃO</p><div class="brand-tag">DE UM DESENHO EM CSS A UMA AVENTURA</div><h1>ABÓBORA <small>O REINO DAS SOMBRAS</small></h1><p class="tagline">Quando o último sino tocar, até as estrelas vão se esconder.</p><div class="controls-menu"><button id="newGame" class="primary">✦ COMEÇAR JORNADA</button><button id="continueGame">↪ CONTINUAR <span id="continueText"></span></button><button id="worldMap">◇ MAPA DAS FASES</button><div class="dual"><button id="settings">⚙ OPÇÕES</button><button id="help">? COMO JOGAR</button></div><div class="dual"><button id="credits">✦ CRÉDITOS</button><button id="original">♡ VER ORIGEM CSS</button></div></div><p class="menu-foot">6 MUNDOS • 36 FASES • 6 GUARDIÕES <span>HTML + CSS + JS • OFFLINE</span></p></div>
+ <div class="menu-hero"><div class="hero-halo"></div><div class="pumpkin-css" aria-hidden="true"><div class="leaf"></div><div class="pumpkin-body"><div class="stripe stripe-a"></div><div class="stripe stripe-b"></div><div class="pumpkin-eye eye-a"><b></b></div><div class="pumpkin-eye eye-b"><b></b></div><div class="cheek cheek-a"></div><div class="cheek cheek-b"></div><div class="pumpkin-mouth"><i></i><i></i></div></div><div class="little-feet"><span></span><span></span></div></div><div class="hero-caption">A CHAMA AINDA VIVE</div></div>
+ </section>
+ <div id="hud" class="hud hidden"><div class="hud-left"><div id="hearts" class="hearts">♥ ♥ ♥ ♥ ♥</div><div class="flame-meter"><span>✦ CHAMA</span><div><i id="flameBar"></i></div></div></div><div class="hud-mid"><span id="worldName">FLORESTA ASSOMBRADA</span><strong id="levelName">A primeira faísca</strong></div><div class="hud-right"><div class="souls">✧ <span id="souls">0/3</span></div><div class="candy">◆ <span id="candy">0</span></div><button id="pause" title="Pausar">Ⅱ</button></div><div id="hint" class="hint"></div><div id="notice" class="notice"></div></div>
+ <section id="modal" class="panel modal hidden"><div class="modal-box"><div class="modal-label" id="modalTag">PAUSA</div><h2 id="modalTitle">O vento silenciou</h2><p id="modalDesc"></p><div id="modalContent" class="modal-content"></div><div id="modalButtons" class="modal-buttons"></div></div></section>
+ <div id="touch" class="touch hidden"><div class="touch-l"><button data-action="left">◀</button><button data-action="right">▶</button></div><div class="touch-r"><button data-action="interact">E</button><button data-action="flame">✦</button><button data-action="attack">⚔</button><button data-action="dash">⇢</button><button data-action="jump" class="touch-jump">↑</button></div></div>
+ <div id="fatal" class="fatal hidden"><h2>Não foi possível iniciar</h2><p id="fatalText"></p></div>
+</div><footer class="outer-footer">ABÓBORA: O REINO DAS SOMBRAS <span>V3 • VIGU STUDIO • JOGÁVEL OFFLINE</span></footer></main>
+<script defer src="js/config.js"></script><script defer src="js/levels.js"></script><script defer src="js/audio.js"></script><script defer src="js/input.js"></script><script defer src="js/physics.js"></script><script defer src="js/art.js"></script><script defer src="js/render.js"></script><script defer src="js/ui.js"></script><script defer src="js/game.js"></script><script defer src="js/main.js"></script>
+</body></html>

@@ -1,0 +1,23 @@
+/* Referência visual do arquivo CSS original de GustavoVitorS.
+ * Reconstituído a partir das propriedades publicamente acessíveis no repositório.
+ * Mantenha o repositório original como fonte canônica:
+ * https://github.com/GustavoVitorS/halloween-pumpkin-CSS
+ */
+body{animation:attack 10s infinite;background:#050514}
+.stalk{width:0;height:0;border-left:10px solid transparent;border-right:20px solid transparent;border-top:40px solid #69e94c;border-radius:5px;margin:0 auto;transform:translateY(70px)}
+.pumpkin{padding-top:0;width:400px;height:300px;background:#ff5100;margin:60px auto 0;border-radius:160px;position:relative;z-index:1}
+.stripesOutter{height:300px;width:300px;border-left:solid 4px #e7936b;border-right:solid 4px #e7936b;border-radius:50%;margin:0 auto}
+.stripesInner{height:300px;width:160px;border-left:solid 4px #e7936b;border-right:solid 4px #e7936b;border-radius:50%;margin:0 auto}
+.leftEye{width:20px;height:20px;border-radius:50%;background:#242439;top:130px;animation:blink 10s infinite;position:relative}
+.rightEye{width:20px;height:20px;border-radius:50%;background:#242439;animation:blink 10s infinite;left:140px;top:110px;position:relative}
+.eyeBall{width:6px;height:6px;border-radius:50%;background:#fff;transform:translate(8px,5px);position:relative}
+.blushLeft{width:18px;height:18px;border-radius:50%;background:red;top:165px;left:110px;position:absolute;animation:blushGone 10s infinite}
+.blushRight{width:18px;height:18px;border-radius:50%;background:red;top:165px;left:273px;position:absolute;animation:blushGone 10s infinite}
+.mouth{width:50px;height:15px;background:#242439;border-radius:20% 20% 90% 90%;transform:translate(55px,140px)}
+.mouth:after,.mouth:before{content:"";width:0;height:0;position:absolute;top:8px;border-left:10px solid transparent;border-right:10px solid transparent;border-top:20px solid #242439;animation:teethShow 10s infinite}
+.mouth:after{left:0}.mouth:before{right:0}
+.shadow{width:340px;height:60px;background:#242439;margin:0 auto;border-radius:80%;transform:translateY(-40px)}
+@keyframes blink{0%,45%,55%,100%{transform:scaleY(1)}50%{transform:scaleY(.15)}}
+@keyframes blushGone{0%,45%,55%,100%{opacity:1}50%{opacity:.4}}
+@keyframes teethShow{50%{transform:translateY(1px)}}
+@keyframes attack{50%{background:#050514}}
