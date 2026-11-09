@@ -183,6 +183,4 @@ To run browser-side checks, open `tests/testes.html`. If you encounter an issue,
 - **V3 gameplay and visual implementation:** developed specifically for this evolution
 - **Art direction:** original Halloween fantasy; inspired by classic platformers' readability and movement feel, without using Nintendo sprites, maps, music or other proprietary assets.
 
-See [LICENSE](LICENSE) for the included license terms.
-
 <div align="center"><strong>From one CSS pumpkin to an entire haunted kingdom. 🎃</strong></div>
