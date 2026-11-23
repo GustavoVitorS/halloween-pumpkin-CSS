@@ -176,11 +176,4 @@ To run browser-side checks, open `tests/testes.html`. If you encounter an issue,
 
 ---
 
-## ❤️ Credits
 
-- **Original HTML/CSS pumpkin concept:** [GustavoVitorS / halloween-pumpkin-CSS](https://github.com/GustavoVitorS/halloween-pumpkin-CSS)
-- **Game direction and identity:** Vigu Studio
-- **V3 gameplay and visual implementation:** developed specifically for this evolution
-- **Art direction:** original Halloween fantasy; inspired by classic platformers' readability and movement feel, without using Nintendo sprites, maps, music or other proprietary assets.
-
-<div align="center"><strong>From one CSS pumpkin to an entire haunted kingdom. 🎃</strong></div>
